@@ -4,10 +4,6 @@ var generateBtn = document.querySelector("#generate");
 // we are adding values to this array using if statement in function generatePassword
 var allCharacters = []
 
-// sets the value of password to an empty string
-// you can assign a value to it by running the generate password function
-var password = "";
-
 function generatePassword() {
   var userInput = window.prompt("How many characters would you like to include in your password?\nEnter a value between 8 - 128");
   if (userInput === null) {
@@ -46,18 +42,21 @@ function generatePassword() {
 
   if (includeUppercase === false && includeLowercase === false && includeNumbers === false && includeSpecial === false) {
     window.alert("You should include at lease one character type.");
+    // this will end the code here and not run the for loop
+    return;
   }
  
+  // sets the value of password to an empty string
+  // a value will then be assigned to it by running the for loop below
+  var password = "";
+
   for (var i = 0; i < userInput; i++) {
     // the addition assignment operator "+=" will take all values from the right of the operator and add them to the variable on the left
-    console.log(password += allCharacters[(Math.floor(Math.random() * allCharacters.length))]);
+    password += allCharacters[(Math.floor(Math.random() * allCharacters.length))];
   }
 
-  writePassword()
-}
+  console.log(password);
 
-// Write password to the #password input
-function writePassword() {
   //targets #password id selector in the html
   var passwordText = document.querySelector("#password");
   // assigns the value of password to the passwordText variable
