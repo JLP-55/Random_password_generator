@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  // we are adding values to this array using if statement in function generatePassword
+  // we are adding values to this array using if statement below
   var allCharacters = []
 
   // sets the value of password to an empty string
@@ -18,7 +18,7 @@ function generatePassword() {
   };
   
   // all possible characters have been assigned to different arrays 
-  // add selected values from these arrays to the global variable allCharacters using below if statements
+  // add selected values from these arrays to the variable allCharacters using below if statements
   var passwordUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
   var passwordLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var passwordNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
@@ -73,6 +73,5 @@ generateBtn.addEventListener("click", generatePassword);
 -̶ u̶s̶e̶ i̶f̶/̶e̶l̶s̶e̶ s̶t̶a̶t̶e̶m̶e̶n̶t̶ d̶o̶ d̶e̶t̶e̶r̶m̶i̶n̶e̶ w̶h̶a̶t̶ t̶o̶ d̶o̶ w̶i̶t̶h̶ t̶h̶e̶ u̶s̶e̶r̶ i̶n̶p̶u̶t̶
 -̶ u̶s̶e̶ f̶o̶r̶ l̶o̶o̶p̶ t̶o̶ i̶t̶e̶r̶a̶t̶e̶ o̶v̶e̶r̶ v̶a̶l̶u̶e̶s̶ i̶n̶ t̶h̶e̶ a̶r̶r̶a̶y̶
 -̶ h̶o̶w̶ t̶o̶ g̶e̶n̶e̶r̶a̶t̶e̶ r̶a̶n̶d̶o̶m̶ v̶a̶l̶u̶e̶s̶?̶ (̶m̶a̶t̶h̶.̶r̶a̶n̶d̶o̶m̶/̶m̶a̶t̶h̶.̶f̶l̶o̶o̶r̶)̶
-- call function generatePassword
 - remember to add semicolons :)
 */
