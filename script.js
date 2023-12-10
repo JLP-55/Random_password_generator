@@ -1,19 +1,23 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// we are adding values to this array using if statement in function generatePassword
-var allCharacters = []
-
 function generatePassword() {
+  // we are adding values to this array using if statement in function generatePassword
+  var allCharacters = []
+
+  // sets the value of password to an empty string
+  // a value will then be assigned to it by running the for loop below
+  var password = "";
+
   var userInput = window.prompt("How many characters would you like to include in your password?\nEnter a value between 8 - 128");
   if (userInput === null) {
     return;
   } else if (userInput < 8 || userInput > 128) {
     window.alert("Please enter a valid number.");
     return;
-  }
-
-  // log all values in different arrays to be utilised 
+  };
+  
+  // all possible characters have been assigned to different arrays 
   // add selected values from these arrays to the global variable allCharacters using below if statements
   var passwordUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
   var passwordLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -23,37 +27,33 @@ function generatePassword() {
   var includeUppercase = window.confirm("Would you like to include uppercase characters?");
   if (includeUppercase === true) {
     allCharacters = allCharacters.concat(passwordUppercase);
-  }
+  };
 
   var includeLowercase = window.confirm("Would you like to include lowercase characters?");
   if (includeLowercase === true) {
     allCharacters = allCharacters.concat(passwordLowercase);
-  }
+  };
 
   var includeNumbers = window.confirm("Would you like to include numeric characters?");
   if (includeNumbers === true) {
     allCharacters = allCharacters.concat(passwordNumbers);
-  }
+  };
 
   var includeSpecial = window.confirm("would you like to include special characters?");
   if (includeSpecial === true) {
     allCharacters = allCharacters.concat(passwordSpecial);
-  }
+  };
 
   if (includeUppercase === false && includeLowercase === false && includeNumbers === false && includeSpecial === false) {
     window.alert("You should include at lease one character type.");
     // this will end the code here and not run the for loop
     return;
-  }
- 
-  // sets the value of password to an empty string
-  // a value will then be assigned to it by running the for loop below
-  var password = "";
+  };
 
   for (var i = 0; i < userInput; i++) {
     // the addition assignment operator "+=" will take all values from the right of the operator and add them to the variable on the left
     password += allCharacters[(Math.floor(Math.random() * allCharacters.length))];
-  }
+  };
 
   console.log(password);
 
