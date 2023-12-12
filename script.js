@@ -4,18 +4,6 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   // we are adding values to this array using if statement below
   var allCharacters = []
-
-  // sets the value of password to an empty string
-  // a value will then be assigned to it by running the for loop below
-  var password = "";
-
-  var userInput = window.prompt("How many characters would you like to include in your password?\nEnter a value between 8 - 128");
-  if (userInput === null) {
-    return;
-  } else if (userInput < 8 || userInput > 128) {
-    window.alert("Please enter a valid number.");
-    return;
-  };
   
   // all possible characters have been assigned to different arrays 
   // add selected values from these arrays to the variable allCharacters using below if statements
@@ -23,6 +11,21 @@ function generatePassword() {
   var passwordLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var passwordNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
   var passwordSpecial = ["+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":",]
+
+  // sets the value of password to an empty string
+  // a value will then be assigned to it by running the for loop below
+  var password = "";
+  
+  var userInput = window.prompt("How many characters would you like to include in your password?\nEnter a value between 8 - 128");
+  if (userInput === false) {
+    return;
+  } else if (userInput < 8 || userInput > 128) {
+    window.alert("Please enter a valid number.");
+    return;
+  } else (userInput === !passwordNumbers); {
+    window.alert("Please enter a valid input.");
+    // return;
+  };
   
   var includeUppercase = window.confirm("Would you like to include uppercase characters?");
   if (includeUppercase === true) {
