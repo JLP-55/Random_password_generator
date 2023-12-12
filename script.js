@@ -17,14 +17,11 @@ function generatePassword() {
   var password = "";
   
   var userInput = window.prompt("How many characters would you like to include in your password?\nEnter a value between 8 - 128");
-  if (userInput === false) {
+  if (userInput === null) {
     return;
   } else if (userInput < 8 || userInput > 128) {
     window.alert("Please enter a valid number.");
     return;
-  } else (userInput === !passwordNumbers); {
-    window.alert("Please enter a valid input.");
-    // return;
   };
   
   var includeUppercase = window.confirm("Would you like to include uppercase characters?");
