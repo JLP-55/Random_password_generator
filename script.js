@@ -22,8 +22,15 @@ function generatePassword() {
   } else if (userInput < 8 || userInput > 128) {
     window.alert("Please enter a valid number.");
     return;
+    // isNaN will determin whether a given value is "not a number." parseInt(userInput) will analyse the value of userInput
+    // Together you can determine whether or not a number value has been assigned to userInput.
+  } else if (isNaN (parseInt(userInput))) {
+    window.alert("Please enter a number.");
+    return;
   };
   
+  console.log(userInput);
+
   var includeUppercase = window.confirm("Would you like to include uppercase characters?");
   if (includeUppercase === true) {
     allCharacters = allCharacters.concat(passwordUppercase);
