@@ -8,13 +8,10 @@ The goal of this project was to be able to generate a completely random password
 
 Upon clicking "Generate Password" on the webpage, the user will be prompted to enter a length for their password and then further prompted to select what type of characters they will be including in their password. finally, the password will be displayed in the box showing "Your Secure Password" from which it can be copied.
 
-Here is a link to the deployed application: ...
+Here is a link to the deployed application: 
+https://jlp-55.github.io/Random_password_generator/
 
 !["Preview image"](./assets/03-javascript-homework-demo.png)
-
-## Credits
-
-Credit goes to ...
 
 ## licence
 
